@@ -135,6 +135,16 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
@@ -189,10 +199,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-12-30 22:20:30 / 修改时间：22:24:16" itemprop="dateCreated datePublished" datetime="2019-12-30T22:20:30+08:00">2019-12-30</time>
+              <time title="创建时间：2019-12-30 22:20:30" itemprop="dateCreated datePublished" datetime="2019-12-30T22:20:30+08:00">2019-12-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-01 12:39:49" itemprop="dateModified" datetime="2020-01-01T12:39:49+08:00">2020-01-01</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -225,138 +241,15 @@
 <li>随机数生成函数Math.random()<em>此函数随机生成一个[0,1)之间的数</em>使用时注意类型转换。<h2 id="判断部分"><a href="#判断部分" class="headerlink" title="判断部分"></a>判断部分</h2></li>
 <li>当无特殊申明时，else总是和最近的那个if匹配。（::在使用if-else时后面总是用{},即使只有一条语句::）</li>
 <li>嵌套if-else：通常为一个二叉树的结构，每进行一个if判断后会进行一个新的<em>完整的</em>if-else语句</li>
-<li>switch语句：::一定要注意每一个case后面的break::<h2 id="循环部分"><a href="#循环部分" class="headerlink" title="循环部分"></a>循环部分</h2></li>
-<li>while语句：相当于一个重复运行的if语句，直到不满足括号里面的条件为止。（循环体内要有能改变条件的语句，否则就是一个死循环）</li>
-<li>do-while语句：在进入循环的时候不做检查，而是在执行一轮循环之后再来检查条件是否满足，满足则继续循环，不满足则结束循环。<del>do-while循环与while循环最大的区别就是条件判断的先后</del>::注意：do-while循环后的分号一定不能忘记::<blockquote>
-<p><strong>Tips</strong>：如果要模拟运行一个很大次数的循环，可以模拟一个较小次数的循环，然后做出判断。<br>::先写循环体内的内容再合理选择使用while或者do-while语句::</p>
-</blockquote>
-</li>
-<li>for循环：for循环像是一个计数循环，含有一个计数器，在计数器达到某个指定值之前重复执行循环体，每执行一轮循环，计数器以一定的<em>步进</em>进行调整（比如说加一或者减一）。::for=对于。::<del>eg：for（count=10；count&gt;0;count=count-1）可以读作：对于一开始的count=10，当count&gt;0时，重复做循环体，每一轮循环在做完之后，使count减一。</del></li>
-<li>for循环中每一个表达式的值都是可以省略的::并且for循环中可以有多个表达式，表达式之间用逗号隔开::<blockquote>
-<p><strong>Tips</strong>:在for循环体初始动作上定义的变量只能在for循环体内部使用，在外部无效。</p>
-</blockquote>
-</li>
-<li>for循环和while循环在大多数情况下可以互换。<del>for（；条件；）=while（条件）</del>::只要是for语句和while语句，就一定跟上一对大括号::</li>
-<li>for循环的循环次数<ol>
-<li>for(i=0;i&lt;n;i=i+1)<del>循环的次数是n，循环结束之后，i的值是n，再循环体内i的值的取值范围是[0,n-1]。</del></li>
-<li>for(i=1;i&lt;=n:i=i+1)<del>循环的次数是n，循环结束后，i的值是n+1，在循环体内i的取值[1,n]</del><blockquote>
-<p><strong>TIps</strong></p>
-<ol>
-<li>::如果有固定次数用for::</li>
-<li>::如果必须执行一次用do-while::</li>
-<li>::其他情况用while:: </li>
-</ol>
-</blockquote>
-</li>
-</ol>
-</li>
-<li>break语句：可以在三种循环中使用，<del>用于跳出::本层::循环体。</del></li>
-<li>continue语句：可以在三种循环体中使用，<del>用于忽略::本次本层::循环中continue语句后的语句，进入下一次循环。</del></li>
-<li>break和continue操作多重循环：先用标号给你需要操作的循环体命名（命名格式为::[名称+:]::放在for前面),然后break或者continue加标号就会对标号的循环体进行操作。</li>
-<li>逻辑运算符：！&gt;&amp;&amp;&gt;||(注意 ! 的先级是最高的）<h2 id="数组部分"><a href="#数组部分" class="headerlink" title="数组部分"></a>数组部分</h2></li>
-<li>有效的下标：<ol>
-<li>最小的下标是0，最大的下标是数组元素的个数-1.</li>
-<li>编译器不会检查你是否使用了有效的下标</li>
-<li>无效的下标会终止程序运行</li>
-</ol>
-</li>
-<li>::防止数组下标越界:: ：元素必须是整数，元素个数必须给出，<del>元素可以是变量</del></li>
-<li>合理使用::length::：在写遍历数组的循环条件时，注意使用length，可以让代码的<em>可扩展性</em>更强。</li>
-<li>new创建的数组会得到默认的0值(Java的特性)。还可以自行初始化，直接用大括号给出数组的所有元素的初始值<del>不需要给出数组的大小，编译器会替你数</del>.</li>
-<li>数组变量<blockquote>
-<p>::数组变量是数组的管理者而非数组本身。::<br>数组必须创建出来然后交给数组变量来管理。<br>数组变量之间的赋值是管理权限的赋于。<br>数组变量之间的比较是判断是否管理同一个数组。</p>
-</blockquote>
-</li>
-<li>for-each循环：做数组的遍历。注意取出来的数只是和数组中的数的值相同，不可以利用for-each循环进行数组元素的修改。<del>for（&lt;类型&gt;&lt;变量&gt;:&lt;数组&gt;）{……}读作：对于&lt;数组&gt;当中的每一个元素，取出来作为&lt;类型&gt;的&lt;变量&gt;</del>  </li>
-<li>二维数组：二维数组的定义与一位数组相同，&lt;类型&gt;&lt;变量&gt; &lt;行&gt;&lt;列&gt;</li>
-<li>二维数组的初始化：<blockquote>
-<p>编译器来数数<br>每行一个{}，用逗号隔开<br>最后的逗号可以存在（古老的传统）<br>如果省略，表示补零</p>
-</blockquote>
-<h2 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h2></li>
-<li>单个的字符是一种特殊的字符类型：char<ul>
-<li>用单引号表示的字符字面量：‘a’，‘1’</li>
-<li>Java用unicode来表示字符，可以表达包括汉字在内的多种文字。</li>
-</ul>
-</li>
-<li>字符之间是可以大小比较或者加减法的，运算之后的值就是unicode编码相加减的值。</li>
-<li>逃逸字符：\n换行\t下一个制表符\r回车<del>\b退格（IDEA的控制台一般不显示退格）</del></li>
-<li>包裹类型：每种基础类型都对应一种包裹类型，可以用包裹类型来定义变量。<ul>
-<li>boolean–Boolean</li>
-<li>char–Character</li>
-<li>int–Integer</li>
-<li>double–Double<br>::包裹类型可以用来查看某种对应类型的最大最小值。（包裹类型.MAX_VAlUE/MIN_VALUE）。还可以判断大小写，转换大小写等。::</li>
-</ul>
-</li>
-<li>当需要让一个类或者对象做事情的时候，用.运算符。</li>
-<li>Math：<ul>
-<li>abs求绝对值</li>
-<li>round四舍五入到整数</li>
-<li>random0～1之间的随机数</li>
-<li>pow（2，3）二的三次方（可以做浮点运算）</li>
-</ul>
-</li>
-<li>字符串变量：<ul>
-<li>String s</li>
-<li>::S::tring是一个类，String的变量是对象的管理者而非所有者。（类似于数组）</li>
-</ul>
-</li>
-<li>字符串的连接：用+进行连接，eg“hello”+“world”——&gt;helloworld。当+的一边是字符串而另一边不是时，会将另一边表达为字符串然后做连接。</li>
-<li>in.next()读入一个单词，单词的标志是空格（空格包括空格、tab和换行）</li>
-<li>in.nextLine()读入一整行</li>
-<li>判断字符串是否相等要用   .equals</li>
-<li>==是来判断他们是不是同一个东西，equals是来判断是否有相同的内容。</li>
-<li>字符串操作<ul>
-<li>字符串是对象，对他的所有操作都是用“.”这个运算符来进行的<ul>
-<li>字符串.操作</li>
-</ul>
-</li>
-<li>它表示对.左边的这个字符串进行右边的那个操作</li>
-<li>这里的字符串可以是变量也可以是常量。</li>
-</ul>
-</li>
-<li>两个字符串可以比较大小使用.compareTo</li>
-<li>访问String里的字符<ul>
-<li>[字符串变量/常量].charAt(index)<ul>
-<li>返回在index上的单个字符</li>
-<li>index的范围是0到length()-1</li>
-<li>第一个字符的index是0，和数组一样。<br>::但是不可以用for-each循环来遍历字符串::</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>得到子串：[变量].substring(n)从n开始一直到结束的所有字符。.sunstring(a,b)从a到b::之前::的所有字符。</li>
-<li>寻找字符：[变量].indexOf()</li>
-<li>::字符串的所有操作不可以改变字符串本身，只是通过这些操作构造出一个新的的字符串。::<h2 id="函数部分"><a href="#函数部分" class="headerlink" title="函数部分"></a>函数部分</h2></li>
-<li>调用函数：<ul>
-<li>函数名（参数值）</li>
-<li>不管是调用还是声明（）都不可缺</li>
-</ul>
-</li>
-<li>return：停止函数的执行，并送回一个值。<ul>
-<li>return；</li>
-<li>return 表达式；</li>
-</ul>
-</li>
-<li>viod函数名（参数表）<ul>
-<li>不能使用带值的return</li>
-<li>可以没有return</li>
-<li>调用的时候不能做返回值的赋值</li>
-</ul>
-</li>
-<li>::如果函数有返回值，则必须使用带值的return::</li>
-<li>每个函数都有自己的变量空间，参数也位于这个独立的空间中，和其他函数没有关系</li>
-<li>::Java语言在调用函数时，永远只能传值给函数::</li>
-<li>本地变量<ul>
-<li>函数的每次运行，就产生了一个独立的变量空间，在这个空间中的变量，是函数这次运行所独有的，称作本地变量。</li>
-<li>定义在函数内部的变量就是本地变量。</li>
-<li>参数也是本地变量。<blockquote>
-<p><strong>TIP</strong>:<strong>本地变量</strong><br>生存期：什么时候这个变量开始出现了，到什么时候它消亡了。<br>作用域：在（代码的）什么范围内可以访问这个变量（这个变量可以起作用）<br>对于本地变量这两个问题的答案是统一的：大括号内————块（一对大括号内）<br>本地变量是定义在块内的：<br>1.它可以是定义在函数的块内。<br>2.也可以是定义在语句的块内。<br>3.甚至可以随便拉一对大括号来定义变量。<br>4.块外面的变量在里面仍然有效<br>5.块外面定义了和里面同名的变量则覆盖外面的。<br>6.不能在一个块内定义同名的变量，也不能定义块外面定义过的变量。<br>7.::本地变量是不会被默认初始化的(使用之前先初始化)::<br>8.参数在进入函数的时候被初始化了。<br>::程序进入这个块之前，其中的变量不存在，离开这个块，其中的变量就消失了::</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-
+<li>switch语句：<strong>一定要注意每一个case后面的break</strong>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/30/Java%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -422,11 +315,13 @@
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
+          
         <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
+          
         <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
@@ -436,6 +331,14 @@
     <a href="/atom.xml" rel="alternate">
       <i class="fa fa-rss"></i>RSS
     </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Myong-coder" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Myong-coder" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/_Myong" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;_Myong" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
   </div>
 
 
@@ -457,7 +360,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
